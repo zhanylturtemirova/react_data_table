@@ -142,15 +142,12 @@ const DataTable: React.FC<Props> = ({ data, columns, searchField }) => {
             name="rows_per_page"
             id="rows_per_page"
             onChange={(e) => handleRowsPerPageChange(e)}
+            defaultValue={rowsPerPage}
           >
             {Array(26)
               .fill(0)
               .map((_, n) => (
-                <option
-                  key={`${n}`}
-                  value={n + 5}
-                  selected={n + 5 === rowsPerPage}
-                >
+                <option key={`${n}`} value={n + 5}>
                   {n + 5}
                 </option>
               ))}

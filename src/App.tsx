@@ -2,11 +2,9 @@ import Countries from "./components/Countries";
 import "./index.scss";
 function App() {
   return (
-    <>
-      <div>
-        <Countries />
-      </div>
-    </>
+    <div>
+      <Countries />
+    </div>
   );
 }
 

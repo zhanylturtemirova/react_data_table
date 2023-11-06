@@ -1,15 +1,14 @@
-import ReactDOM from "react-dom/client";
-import { ApolloClient, ApolloProvider, InMemoryCache } from "@apollo/client";
-
+import { ApolloClient, InMemoryCache, ApolloProvider } from "@apollo/client";
 import App from "./App.tsx";
 import "./index.scss";
+import { createRoot } from "react-dom/client";
 
 const client = new ApolloClient({
   uri: "https://countries.trevorblades.com",
   cache: new InMemoryCache(),
 });
 
-ReactDOM.createRoot(document.getElementById("root")!).render(
+createRoot(document.getElementById("root")!).render(
   <ApolloProvider client={client}>
     <App />
   </ApolloProvider>
