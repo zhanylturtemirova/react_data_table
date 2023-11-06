@@ -1,0 +1,74 @@
+$mediaMinWidth: 480px;
+
+$border_color: #bbbaba;
+$button_color: #eee;
+$button_border: #ccc;
+$active_color: #cddfff;
+
+.DataTable {
+  max-width: 550px;
+  margin: 50px auto;
+  & table {
+    border-collapse: collapse;
+    width: 100%;
+    & td {
+      padding: 10px 15px;
+      border: 1px solid $border_color;
+      width: 50%;
+    }
+    & thead {
+      background: $button_border;
+      & tr th {
+        padding: 10px 15px;
+        border: 1px solid $border_color;
+        & button {
+          border: none;
+          border: 0px solid;
+          font-weight: bold;
+          background: none;
+          cursor: pointer;
+        }
+      }
+    }
+    & tbody {
+      & tr:hover {
+        background: $active_color;
+      }
+    }
+  }
+  & input {
+    display: block;
+    padding: 10px;
+    font-size: medium;
+    border: 1px, solid, $border_color;
+    width: 100%;
+    margin-bottom: 15px;
+  }
+  & footer {
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+
+    & button {
+      background: $button_color;
+      border: 1px solid $button_border;
+      padding: 5px;
+      cursor: pointer;
+    }
+  }
+}
+@media (max-width: 453px) {
+  .DataTable {
+    margin: 5px;
+    footer {
+      display: inline-block;
+    }
+    .pagination {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+}
